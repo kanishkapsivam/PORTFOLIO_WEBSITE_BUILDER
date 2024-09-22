@@ -1,0 +1,81 @@
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000000, #333333);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    color: #e60000;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Templates Container */
+.templates {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Template Style */
+.template {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover Animation */
+.template img:hover {
+    transform: translateY(-20px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Style */
+.template button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e60000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.template button:hover {
+    background-color: #ff3333;
+    transform: scale(1.05);
+}
+
+/* Animation on Load */
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.template {
+    animation: popIn 1s ease;
+}
